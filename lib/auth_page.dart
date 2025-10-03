@@ -15,7 +15,8 @@ class AuthPage extends StatelessWidget {
               'io.mydomain.myapp://callback', // Replace with your deep link
           onSignInComplete: (response) {
             // Handle successful sign-in
-            Navigator.of(context).pushReplacementNamed('/home');
+            // Navigation is now handled by AuthWrapper's StreamBuilder
+            // No need to manually navigate here
           },
           onSignUpComplete: (response) {
             // Handle successful sign-up (e.g., show a message to check email)
